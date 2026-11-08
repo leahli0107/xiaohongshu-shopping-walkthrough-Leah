@@ -68,8 +68,8 @@ a { color: var(--red-ink); }
 .nav-icon { width: 22px; text-align: center; font-size: 14px; color: var(--muted); flex: none; }
 
 /* ---------- main ---------- */
-main { min-width: 0; padding-block: 32px 64px; padding-left: clamp(16px, 4vw, 48px); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.view { max-width: 1080px; display: flex; flex-direction: column; gap: 20px; }
+main { min-width: 0; padding-block: 32px 64px; padding-left: clamp(16px, 4vw, 48px); padding-right: max(clamp(16px, 4vw, 48px), env(safe-area-inset-right, 0px)); }
+.view { width: 100%; display: flex; flex-direction: column; gap: 20px; }
 .eyebrow { font-size: 12px; letter-spacing: .14em; color: var(--red-ink); font-weight: 700; }
 .vh h1 { font-size: clamp(26px, 3.2vw, 34px); font-weight: 900; }
 .vh .sub { color: var(--muted); margin-top: 4px; }
@@ -222,7 +222,7 @@ tr.click:hover td { background: var(--surface-2); }
   .nav-group { flex-direction: row; gap: 4px; }
   .nav-item { width: auto; white-space: nowrap; padding: 6px 10px; }
   .nav-name { font-size: 13px; }
-  main { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-block: 20px 48px; }
+  main { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pic { width: 170px; flex: none; } .pic.wide { width: 300px; }
   .matrix { grid-template-columns: minmax(0, 1fr); } .mx-h { display: none; }
